@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TV_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="plaese READ QUESTION CAREFULLY and give most suitable answers"
+        android:textSize="15sp"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:layout_below="@id/TV_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_margin="10dp"
+        android:id="@+id/question"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/rel">
+    </androidx.recyclerview.widget.RecyclerView>
+    </androidx.core.widget.NestedScrollView>
+    <Button
+        android:id="@+id/next"
+        android:layout_alignParentBottom="true"
+        android:layout_width="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="40dp"
+        android:textSize="16dp"
+        android:text="NEXT"
+        android:background="@drawable/button_round"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorBlack">
+
+    </Button>
+
+</RelativeLayout>
